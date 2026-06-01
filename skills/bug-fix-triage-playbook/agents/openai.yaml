@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bug Fix Triage"
+  short_description: "Diagnostica e corrige bugs com validacao e sem regressao"
+  default_prompt: "Use $bug-fix-triage-playbook to reproduzir, diagnosticar e corrigir este bug com validacao completa."

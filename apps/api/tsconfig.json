@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "paths": {
+      "@gp/shared": [
+        "../../packages/shared/src"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "test"
+  ]
+}

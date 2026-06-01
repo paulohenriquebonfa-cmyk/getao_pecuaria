@@ -1,0 +1,4 @@
+interface:
+  display_name: "Offline Sync Guardrails"
+  short_description: "Governanca para fila offline, sync incremental e conflitos"
+  default_prompt: "Use $offline-sync-guardrails to revisar e fortalecer a sincronizacao offline-first deste app."

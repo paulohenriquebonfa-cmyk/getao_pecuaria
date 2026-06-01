@@ -1,0 +1,13 @@
+{
+  "name": "@gp/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "build": "echo \"mobile build will be configured in next sprint\"",
+    "lint": "echo \"no lint configured\""
+  },
+  "dependencies": {
+    "@gp/shared": "0.1.0"
+  }
+}

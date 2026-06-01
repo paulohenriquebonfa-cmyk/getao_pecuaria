@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Contract E2E"
+  short_description: "Padroniza testes E2E para contratos HTTP da API"
+  default_prompt: "Use $api-contract-e2e-playbook to validar contratos E2E da API deste projeto."

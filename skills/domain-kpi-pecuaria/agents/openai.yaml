@@ -1,0 +1,4 @@
+interface:
+  display_name: "KPI Pecuaria"
+  short_description: "Padroniza KPIs zootecnicos e financeiros por lote"
+  default_prompt: "Use $domain-kpi-pecuaria to calcular e validar KPIs de engorda/semi-confinamento deste lote."

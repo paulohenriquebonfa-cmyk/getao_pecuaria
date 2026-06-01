@@ -1,0 +1,185 @@
+:root {
+  --bg: #f3f6f2;
+  --panel: #ffffff;
+  --ink: #1f2a1f;
+  --accent: #2d6a4f;
+  --muted: #647067;
+  --border: #d8dfd8;
+  --danger: #c23434;
+  --danger-bg: #fff3f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #edf3ea 0%, var(--bg) 55%);
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 24px 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.value {
+  margin-top: 6px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.05;
+}
+
+h2 {
+  letter-spacing: 0;
+  font-size: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.formGrid label {
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.formGrid input,
+.formGrid select,
+button {
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 12px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+  background: #f7faf7;
+}
+
+button:hover {
+  border-color: #b7c4b8;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: 2px solid #9fc6b2;
+  outline-offset: 1px;
+}
+
+.topBar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.topBar p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.topBar a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.topBar a:hover {
+  text-decoration: underline;
+}
+
+.alertError {
+  margin-top: 12px;
+  border-color: #e7a2a2;
+  color: #7f1717;
+  background: var(--danger-bg);
+}
+
+.alertError strong {
+  color: var(--danger);
+}
+
+.techDetail {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #6f1111;
+  word-break: break-word;
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.snapshotRow {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr 1fr;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 13px;
+}
+
+.stockTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.stockTable th,
+.stockTable td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 860px) {
+  h1 {
+    font-size: 36px;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .snapshotRow {
+    grid-template-columns: 1fr;
+  }
+}

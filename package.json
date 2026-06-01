@@ -1,0 +1,27 @@
+{
+  "name": "gestao-pecuaria",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "overrides": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "scripts": {
+    "build": "npm run -ws build",
+    "test": "npm run -w @gp/api test",
+    "test:e2e": "npm run -w @gp/api test:e2e",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "quality:gate": "npm run -w @gp/api test && npm run -w @gp/api test:e2e && npm run -w @gp/api build && npm run -w @gp/web build",
+    "dev:restart": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"$ports=3000,3001; $procIds=Get-NetTCPConnection -State Listen | Where-Object { $_.LocalPort -in $ports } | Select-Object -ExpandProperty OwningProcess -Unique; foreach($procId in $procIds){ Stop-Process -Id $procId -Force -ErrorAction SilentlyContinue }; if(Test-Path 'apps/web/.next'){ Remove-Item -Recurse -Force 'apps/web/.next' -ErrorAction SilentlyContinue }; Start-Process -FilePath 'C:\\Windows\\System32\\cmd.exe' -ArgumentList '/c','cd /d C:\\Users\\paulo\\OneDrive\\Documentos\\Gestao_Pecuaria && npm run -w @gp/api start:dev' -WindowStyle Hidden; Start-Process -FilePath 'C:\\Windows\\System32\\cmd.exe' -ArgumentList '/c','cd /d C:\\Users\\paulo\\OneDrive\\Documentos\\Gestao_Pecuaria && npm run -w @gp/web dev' -WindowStyle Hidden; Start-Sleep -Seconds 8; Get-NetTCPConnection -State Listen | Where-Object { $_.LocalPort -in $ports } | Select-Object LocalAddress,LocalPort,OwningProcess\"",
+    "lint": "npm run -ws lint"
+  }
+}

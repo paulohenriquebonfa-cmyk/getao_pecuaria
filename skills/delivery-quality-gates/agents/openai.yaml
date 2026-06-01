@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delivery Quality Gates"
+  short_description: "Padroniza gates tecnicos antes de merge e release"
+  default_prompt: "Use $delivery-quality-gates to validar os gates de qualidade desta entrega."

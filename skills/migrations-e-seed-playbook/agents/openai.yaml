@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrations e Seed"
+  short_description: "Padroniza migrations Prisma e dados seed reproduziveis"
+  default_prompt: "Use $migrations-e-seed-playbook to evoluir o schema Prisma e atualizar seed com seguranca."

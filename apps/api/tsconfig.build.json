@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "../.."
+  },
+  "include": ["src", "../../packages/shared/src"],
+  "exclude": ["test", "test-e2e", "**/*.spec.ts", "**/*.e2e-spec.ts"]
+}

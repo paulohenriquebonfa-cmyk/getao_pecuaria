@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.next/
+apps/*/.next/
+apps/*/dist/
+coverage/
+
+# Caches
+.turbo/
+.expo/
+.expo-shared/
+.vite/
+
+# Environment files (keep examples)
+.env
+.env.*
+!.env.example
+!.env.local.example
+apps/*/.env
+apps/*/.env.*
+!apps/*/.env.example
+!apps/*/.env.local.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
